@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Joyeux anniversaire Isabela ❤</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Kaushan+Script&display=swap" rel="stylesheet"><!-- polices : stylo-plume (Pour ma chérie) + écriture de la lettre -->
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Kaushan+Script&family=Press+Start+2P&display=swap" rel="stylesheet"><!-- polices : stylo-plume (Pour ma chérie) + écriture de la lettre -->
 <style>
   body {
     margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
@@ -136,11 +136,11 @@
     display: block; position: absolute; top: -195px; right: -110px; width: 240px; pointer-events: none; z-index: 2;
     transform-origin: 50% 90%; animation: flotte 2.8s ease-in-out infinite alternate;
   }
-  .card.papier { margin-top: 140px; max-width: 760px; padding: 26px 30px 26px; } /* taille de la lettre + place pour les ballons au-dessus */
+  .card.papier { margin-top: 140px; max-width: min(1150px, calc(100% - 260px)); padding: 26px 30px 26px; } /* taille de la lettre + place pour les ballons au-dessus */
   .card.papier #lettre { line-height: 1.32; }
   @media (max-width: 600px) {
     .card.papier .ballons { width: 150px; top: -122px; right: 0; }
-    .card.papier { margin-top: 125px; width: calc(100% - 8px); padding: 16px 10px 18px; }
+    .card.papier { margin-top: 125px; max-width: none; width: calc(100% - 8px); padding: 16px 10px 18px; }
     .card.papier #lettre { font-size: 1.12rem; line-height: 1.25; }
   }
   @keyframes flotte { from { transform: translateY(0) rotate(-4deg); } to { transform: translateY(-10px) rotate(4deg); } }
@@ -160,6 +160,12 @@
   @keyframes pose { from { opacity: 0; transform: rotate(-15deg) scale(.5); } }
   #surprise { padding: 16px; margin: 10px 0; font-size: 1.15rem; animation: pop .5s; }
   @keyframes pop { 0% { transform: scale(.3); opacity: 0; } 70% { transform: scale(1.1); } }
+  .mot-pixel { /* mots en pixels façon jeu vidéo 2D */
+    position: fixed; left: 0; top: 0; z-index: 0; pointer-events: none; white-space: nowrap;
+    font-family: 'Press Start 2P', monospace; font-size: clamp(18px, 2.8vw, 34px); line-height: 1.2;
+    text-shadow: 3px 0 #111, -3px 0 #111, 0 3px #111, 0 -3px #111, 3px 3px #111, -3px 3px #111, 3px -3px #111, -3px -3px #111, 5px 5px 0 rgba(0,0,0,.35);
+  }
+  .nokyo { font-size: 1.25rem; font-weight: bold; color: #c2385e; margin: 14px 0 0; }
   /* Question oui / non */
   #question { overflow-wrap: anywhere; transition: font-size .4s cubic-bezier(.34, 1.56, .64, 1); }
   .chat { display: block; height: min(300px, 34vh); max-width: 100%; object-fit: contain; margin: 6px auto 12px; border-radius: 12px; }
@@ -392,11 +398,17 @@ const lettre = `Ma Isabela,
 
 Je voulais t'offrir quelque chose d'unique, mais il paraît que je ne peux pas t'offrir la lune (problème de livraison). Alors je t'offre cette lettre, et tout ce que j'ai dans le cœur.
 
-Il y a des gens qui cherchent toute leur vie ce que j'ai trouvé en toi. Quand je te regarde, j'ai l'impression que le monde ralentit. Ton sourire me désarme, ta voix me calme, et ton rire est mon son préféré au monde. Depuis que tu es dans ma vie, mes journées ont changé.
+Il y a des gens qui cherchent toute leur vie ce que j'ai trouvé en toi. Quand je te regarde, j'ai l'impression que le monde ralentit. Ton sourire me désarme, ta voix me calme, et ton rire est mon son préféré. Depuis que tu es dans ma vie, mes journées ont changé. Ça va bientôt faire presque un an qu'on se parle, et je trouve qu'on s'en est bien sortis, j'ai pas vu le temps passer.
 
-Je ne te le dis peut-être pas assez, mais je suis fier de toi. Fier de la femme que tu es, de ta douceur, de tout ce que tu construis. Tu rends les choses simples plus belles.
+Je me souviens encore de quand on s'est donné rendez-vous à la Cité Internationale. Je ne savais pas encore que ce moment allait tout changer. Aujourd'hui, je le sais : c'est toi que je veux.
 
-Pour tes 21 ans, je te souhaite tout ce que tu mérites : des rêves qui se réalisent, de la confiance en toi, et beaucoup d'amour. Pour ça au moins, tu peux compter sur moi.
+Les moments qu'on a passés sur le paddle à Paladru, quand t'allais te noyer parce que t'as bu la tasse, la fois où t'es tombée dans le parc avec Millouch, nos premiers dessins, notre premier bisou, notre journée au kayak (“LA COHÉSION ISABELA !” 😂), les heures qu'on a passées tous les deux sur 99 Nuits comme des enfants, le jour où on s'est posés pour le 14 juillet en mangeant une pizza, quand on a fait les pétards avec Millouch, et j'en passe… On a fait tellement de choses que je ne me souviens plus de tout. Bref, chaque moment passé avec toi, c'était quelque chose de magique.
+
+On a pris notre temps pour construire quelque chose de concret, on avance à notre rythme. On essayait de rester dehors le plus possible, au point que tu pouvais te faire gronder par tes parents, mais tu me faisais passer avant, et ça, je l'ai bien pris en compte. Tu ne m'as jamais rejeté, t'as toujours su me donner ton temps, t'étais prête à tout pour qu'on se voie.
+
+Je ne te le dis peut-être pas assez, mais je suis fier de toi. Fier de la femme que tu es, de ta douceur. Tu rends les choses simples plus belles.
+
+Pour tes 21 ans, je te souhaite tout ce que tu mérites : de la confiance en toi, et beaucoup d'amour. Pour ça au moins, tu peux compter sur moi.
 
 Merci d'être toi.
 Tu es mon plus beau cadeau, et pourtant c'est ton jour.
@@ -420,15 +432,17 @@ const questions = [
   { q: "Quelle est la date de notre premier bisou ?",
     choix: ["Samedi 28 mars", "Samedi 29 mars", "Dimanche 20 mars", "Dimanche 29 mars"] },
   { q: "Quelle était la couleur de ma veste le premier jour du date ?",
-    choix: ["Grise", "Noire", "Bleue", "Rousse"] },
+    choix: ["Grise", "Noire", "Bleue", "Oasis"] },
   { q: "Quelle est la date de mon anniv ? (Ai grijă la răspuns – s-ar putea să te omor.)",
     choix: ["2 janvier", "1er janvier", "3 janvier", "4 janvier"] },
 ];
 // Une surprise par question, dans le même ordre que les questions (à modifier). La dernière est pour le jeu des paires.
-const surprises = ["Un bisou 😘", "Un resto en amoureux 🍝", "Un massage 💆‍♀️", "Un câlin de 10 minutes 🤗", "Ton cadeau t'attend... 🎁", "Un bisou dans le cou 😚", "Un bisou sur le front 😇", "Une soirée film sous la couette 🎬"];
+const surprises = ["Un bisou 😘", "Un câlin 🤗", "Un massage 💆‍♀️", "Des papouilles 🥰", "Un massage des bras 💆‍♀️", "Un massage du dos 💆‍♀️", "Un croc sur ton oreille 😈", "Des guilis 🤭"];
 // Question 6 : jeu des paires, les dessins des cartes (chaque dessin apparaît 2 fois)
 const pairesMemo = ["❤️", "💌", "🌹", "💍", "💋", "🧸", "🍫", "💐"];
-const taquineries = ["Non non non 😜", "Tu es sûre ?", "Essaie encore mon cœur", "Raté ! 😘"];
+const taquineries = ["Eşti naşpa 😜", "Pooh 🐻", "Măgarule 🫏", "Porcule 🐷", "Pușlama 😏", "Cartof 🥔"];
+const messageNokyo = "Bon, maintenant que t'as passé ça, il est temps d'aller se casser le ventre au NOKYO 🍣";
+const messageCoffre = "Nu uita să deschizi portbagajul mașinii !";
 const messageFin = "Joyeux anniversaire mon amour, je t'aime ❤";
 // =====================================
 
@@ -558,7 +572,7 @@ function ecrireLettre() {
     clearInterval(ecriture);
     $('indice').style.visibility = '';
     attendreDoubleTouche(card);
-  }, 45); // vitesse d'écriture (plus petit = plus rapide)
+  }, 30); // vitesse d'écriture (plus petit = plus rapide)
 }
 
 function attendreDoubleTouche(card) {
@@ -589,7 +603,7 @@ function ajusterTaille(card) {
   const place = innerHeight - parseFloat(getComputedStyle(card).marginTop) - 6;
   let taille = innerWidth < 600 ? 22 : 26; // taille de départ en pixels
   $('lettre').style.fontSize = taille + 'px';
-  const mini = innerWidth < 600 ? 17 : 12; // jamais plus petit que ça, pour rester lisible
+  const mini = 11; // jamais plus petit que ça, pour rester lisible
   while (card.offsetHeight > place && taille > mini) $('lettre').style.fontSize = --taille + 'px';
 }
 
@@ -651,7 +665,9 @@ function afficher() {
     $('progress').textContent = '';
     $('question').textContent = `Score : ${score} / ${total}`;
     $('msg').textContent = messageFin;
+    $('answers').innerHTML = `<p class="nokyo">${messageNokyo}</p>`;
     enveloppesFin();
+    setTimeout(pageCoffre, 20000); // 20 secondes plus tard : la dernière page
     return;
   }
   rate = false;
@@ -666,6 +682,7 @@ function afficher() {
       b.textContent = texte;
       b.onclick = () => {
         if (bonne) {
+          sonBon();
           b.classList.add('ok');
           if (!rate) score++;
           $('msg').textContent = "Bravo ❤";
@@ -674,6 +691,7 @@ function afficher() {
           $('surprise').hidden = false;
           setTimeout(() => { $('surprise').hidden = true; i++; afficher(); }, 3500);
         } else {
+          sonFaux();
           b.classList.add('ko');
           b.disabled = true;
           rate = true;
@@ -702,6 +720,7 @@ function memo() {
       const [a, b] = ouvertes;
       if (a.textContent === b.textContent) {
         a.classList.add('trouvee'); b.classList.add('trouvee'); ouvertes = [];
+        sonBon();
         $('msg').textContent = "Une paire ❤";
         if (++trouvees === pairesMemo.length) {
           score++;
@@ -711,6 +730,7 @@ function memo() {
           setTimeout(() => { $('surprise').hidden = true; ouiNon(); }, 3500); // après les paires : la question oui / non
         }
       } else {
+        sonFaux();
         $('msg').textContent = taquineries[Math.floor(Math.random() * taquineries.length)];
         setTimeout(() => { a.classList.remove('retournee'); b.classList.remove('retournee'); ouvertes = []; }, 900);
       }
@@ -779,6 +799,20 @@ function eclatCoeurs() { // pluie de cœurs depuis le centre de l'écran
   }
 }
 
+// Dernière page, 20 secondes après le score
+function pageCoffre() {
+  const card = document.querySelector('.card');
+  card.animate([{ opacity: 1 }, { opacity: 0, transform: 'scale(.9)' }], 600).onfinish = () => {
+    $('progress').textContent = '';
+    $('question').textContent = messageCoffre;
+    $('question').style.fontSize = 'min(2.2rem, 8vw)';
+    $('msg').textContent = '';
+    $('answers').innerHTML = '';
+    card.animate([{ opacity: 0, transform: 'scale(.8)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 700, easing: 'cubic-bezier(.34, 1.56, .64, 1)' });
+    for (let k = 0; k < 4; k++) setTimeout(eclatCoeurs, k * 250);
+  };
+}
+
 // Fin du quiz : des petites enveloppes en pixels se baladent sur l'écran
 const pixels = {
   fermee: ['kkkkkkkkkkkkkkkkkk', 'kkwwwwwwwwwwwwwwkk', 'kwkkwwwwwwwwwwkkwk', 'kwwwkwwwwwwwwkwwwk', 'kwwwwkrrwwrrkwwwwk', 'kwwwwrrrrrrrrwwwwk',
@@ -793,7 +827,24 @@ function dessinPixels(lignes) {
   lignes.forEach((l, y) => [...l].forEach((ch, x) => { if (ch !== '.') rects += `<rect x="${x}" y="${y}" width="1.05" height="1.05" fill="${couleursPixels[ch]}"/>`; }));
   return `<svg viewBox="0 0 ${lignes[0].length} ${lignes.length}" shape-rendering="crispEdges" style="width:100%;display:block">${rects}</svg>`;
 }
+// Les mots souvenirs qui se baladent aussi, en style jeu vidéo rétro
+const motsFin = ["Kayak", "Paddle", "Cité Internationale", "Puzzle", "Safari", "Bob", "Bobette", "Tic & Tac", "Cozy Pizza", "99 Nuits", "Dessin", "Feu d'artifice"];
+const couleursMots = ['#ff3b5c', '#ffd23f', '#3ec1ff', '#7cff6b', '#ff8a3d', '#c77dff', '#ff6ec7'];
+function motsFin_() {
+  motsFin.forEach((mot, k) => {
+    const e = document.createElement('div');
+    e.className = 'mot-pixel';
+    e.textContent = mot;
+    e.style.color = couleursMots[k % couleursMots.length];
+    document.body.appendChild(e);
+    const l = e.offsetWidth, h = e.offsetHeight;
+    const point = () => `translate(${Math.random() * Math.max(0, innerWidth - l)}px, ${Math.random() * Math.max(0, innerHeight - h)}px) rotate(${Math.random() * 16 - 8}deg)`;
+    e.animate(Array.from({ length: 5 }, () => ({ transform: point() })),
+      { duration: 14000 + Math.random() * 8000, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
+  });
+}
 function enveloppesFin() {
+  motsFin_();
   ['fermee', 'ouverte', 'coeur', 'fermee', 'ouverte', 'coeur', 'fermee', 'coeur', 'ouverte', 'coeur'].forEach(sorte => {
     const e = document.createElement('div');
     const larg = sorte === 'coeur' ? 26 + Math.random() * 14 : 60 + Math.random() * 30;
@@ -836,6 +887,17 @@ function bruitClic() {
   g.gain.setValueAtTime(.12, t); g.gain.exponentialRampToValueAtTime(.001, t + .06); // .12 = volume du clic
   o.connect(g).connect(audio.destination); o.start(t); o.stop(t + .07);
 }
+// Sons du quiz : "bonne réponse" (petite mélodie qui monte) et "mauvaise réponse" (buzz grave)
+function note(freq, debut, duree, type = 'sine', volume = .18) {
+  audio = audio || new AudioContext();
+  const o = audio.createOscillator(), g = audio.createGain(), t = audio.currentTime + debut;
+  o.type = type; o.frequency.setValueAtTime(freq, t);
+  g.gain.setValueAtTime(volume, t); g.gain.exponentialRampToValueAtTime(.001, t + duree);
+  o.connect(g).connect(audio.destination); o.start(t); o.stop(t + duree);
+}
+function sonBon() { note(660, 0, .15); note(880, .1, .15); note(1320, .2, .35); }
+function sonFaux() { note(180, 0, .2, 'sawtooth', .12); note(140, .18, .35, 'sawtooth', .12); }
+
 function taper(touche) {
   if (!$('verrou') || $('cases').classList.contains('faux')) return;
   bruitClic();
